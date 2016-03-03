@@ -1,26 +1,33 @@
 {
-  "name":         "docco",
-  "description":  "The Quick and Dirty Literate Programming Documentation Generator",
-  "keywords":     ["documentation", "docs", "generator", "literate", "coffeescript"],
-  "author":       "Jeremy Ashkenas",
-  "version":      "0.7.0",
-  "license":      "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jashkenas/docco.git"
-  },
-  "engines": {
-    "node":       ">=0.2.0"
-  },
-  "dependencies": {
-    "commander":  ">= 0.5.2",
-    "marked":     ">= 0.2.7",
-    "fs-extra":   ">= 0.6.0",
-    "underscore": ">= 1.0.0",
-    "highlight.js": ">= 8.0.x"
-  },
-  "main" :        "./docco",
-  "bin": {
-    "docco":      "./bin/docco"
-  }
+    "name": "betterdocco",
+    "description": "The (not so) Quick and Dirty Literate Programming Documentation Generator",
+    "keywords": [
+        "documentation",
+        "docs",
+        "generator",
+        "literate",
+        "coffeescript"
+    ],
+    "author": "Igor Ramadas",
+    "version": "0.7.1",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jashkenas/betterdocco.git"
+    },
+    "engines": {
+        "node": ">=0.2.0"
+    },
+    "dependencies": {
+        "coffee-script": ">= 1.10.0",
+        "commander": ">= 0.5.2",
+        "marked": ">= 0.2.7",
+        "fs-extra": ">= 0.6.0",
+        "underscore": ">= 1.0.0",
+        "highlight.js": ">= 8.0.x"
+    },
+    "main": "./betterdocco",
+    "bin": {
+        "betterdocco": "./bin/betterdocco"
+    }
 }

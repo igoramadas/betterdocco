@@ -1,6 +1,6 @@
 This is a simple plain-markdown template.
 
-It can be used to convert your docco output even further,
+It can be used to convert your betterdocco output even further,
 for example to output to PDF via `LaTeX` with [`pandoc`][pandoc].
 
 The resulting markdown uses code fences (<code>```</code>), 
@@ -11,8 +11,8 @@ Example PDF output:
     # fetch some annotated source code
     cd /tmp
     wget https://raw.github.com/documentcloud/underscore/master/underscore.js 
-    # make plain with docco
-    docco -l plain-markdown underscore.js
+    # make plain with betterdocco
+    betterdocco -l plain-markdown underscore.js
     cd ./docs
     # make PDF from plaintext with pandoc
     pandoc -f markdown docs/underscore.html -o underscore.pdf
@@ -34,7 +34,7 @@ An full-fledged scientific-looking PDF could use these options:
       docs/underscore.html
 
 
-This is as quick-and-dirty as the original docco,
+This is as quick-and-dirty as the original betterdocco,
 so there are some **bugs**:
 
 - The code blocks don't always fit on paper (if the lines are too long). This is a serious issue, but could be fixed "easily" in [pandoc's LaTeX template][] (where "easy" is relative, as always when dealing with LaTeX)
