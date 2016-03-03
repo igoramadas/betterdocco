@@ -201,6 +201,14 @@ and rendering it to the specified output path.
 
             path.join(config.output, dirname + filename)
 
+        menuText = (file) ->
+            filename = path.basename(file)
+            dirname = file.replace path.basename(file), ''
+            dirname = dirname.replace path.resolve(config.output), ''
+            dirname = dirname.replace path.resolve(__dirname), ''
+
+            path.join(dirname + filename)
+
 The **title** of the file is either the first heading in the prose, or the
 name of the source file.
 
@@ -212,7 +220,7 @@ name of the source file.
 
         html = config.template {
             sources: config.sources, css: path.basename(config.css),
-            title, hasTitle, sections, path, destination,
+            title, hasTitle, sections, path, destination, menuText
         }
 
         console.log "betterdocco: #{source} -> #{destination source}"
@@ -226,7 +234,7 @@ Default configuration **options**. All of these may be extended by
 user-specified options.
 
     defaults =
-        layout: 'parallel'
+        layout: 'betterdocco'
         output: 'docs'
         template: null
         css: null
@@ -333,7 +341,7 @@ Parse options using [Commander](https://github.com/visionmedia/commander.js).
         commander.version(version)
         .usage('[options] files')
         .option('-L, --languages [file]', 'use a custom languages.json', _.compose JSON.parse, fs.readFileSync)
-        .option('-l, --layout [name]', 'choose a layout (parallel, linear or classic)', c.layout)
+        .option('-l, --layout [name]', 'choose a layout (parallel, linear, classic or betterdocco)', c.layout)
         .option('-o, --output [path]', 'output to a given folder', c.output)
         .option('-c, --css [file]', 'use a custom css file', c.css)
         .option('-t, --template [file]', 'use a custom .jst template', c.template)

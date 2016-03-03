@@ -16,7 +16,7 @@ task 'install', 'install the `betterdocco` command into /usr/local (or --prefix)
   lib  = base + '/lib/betterdocco'
   exec([
     'mkdir -p ' + lib + ' ' + base + '/bin'
-    'cp -rf bin README resources ' + lib
+    'cp -rf bin README resources index.js betterdocco.litcoffee package.json node_modules ' + lib
     'ln -sf ' + lib + '/bin/betterdocco ' + base + '/bin/betterdocco'
   ].join(' && '), (err, stdout, stderr) ->
    if err then console.error stderr
@@ -26,7 +26,7 @@ task 'doc', 'rebuild the Docco documentation', (options) ->
   layout = options.layout or 'linear'
   exec([
     "bin/betterdocco --layout #{layout} betterdocco.litcoffee"
-    "sed \"s/betterdocco.css/resources\\/#{layout}\\/betterdocco.css/\" < docs/betterdocco.html > index.html"
+    "sed \"s/docco.css/resources\\/#{layout}\\/docco.css/\" < docs/betterdocco.html > index.html"
     'rm -r docs'
   ].join(' && '), (err) ->
     throw err if err
