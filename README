@@ -1,16 +1,16 @@
- ____
-/\  _`\
-\ \ \/\ \        ___         ___         ___         ___
- \ \ \ \ \      / __`\      /'___\      /'___\      / __`\
-  \ \ \_\ \    /\ \ \ \    /\ \__/     /\ \__/     /\ \ \ \
-   \ \____/    \ \____/    \ \____\    \ \____\    \ \____/
-    \/___/      \/___/      \/____/     \/____/     \/___/
+ ____             __     __                       ____
+/\  _`\          /\ \__ /\ \__                   /\  _`\
+\ \ \L\ \     __ \ \ ,_\\ \ ,_\     __   _ __    \ \ \/\ \    ___     ___     ___     ___
+ \ \  _ <'  /'__`\\ \ \/ \ \ \/   /'__`\/\`'__\   \ \ \ \ \  / __`\  /'___\  /'___\  / __`\
+  \ \ \L\ \/\  __/ \ \ \_ \ \ \_ /\  __/\ \ \/     \ \ \_\ \/\ \L\ \/\ \__/ /\ \__/ /\ \L\ \
+   \ \____/\ \____\ \ \__\ \ \__\\ \____\\ \_\      \ \____/\ \____/\ \____\\ \____\\ \____/
+    \/___/  \/____/  \/__/  \/__/ \/____/ \/_/       \/___/  \/___/  \/____/ \/____/ \/___/
 
 
-Docco is a quick-and-dirty, hundred-line-long, literate-programming-style
-documentation generator. For more information, see:
+Better Docco is a not quick-and-dirty, hundred-line-long, literate-programming-style
+documentation generator based on Docco. For more information, see:
 
-http://jashkenas.github.com/betterdocco/
+https://github.com/igoramadas/betterdocco
 
 Installation:
 

@@ -189,7 +189,9 @@ if not specified.
 
 Once all of the code has finished highlighting, we can **write** the resulting
 documentation file by passing the completed HTML sections into the template,
-and rendering it to the specified output path.
+and rendering it to the specified output path. Here we improved the original
+docco so it uses the full path of the file on the filename and on the menu
+text, to better handle documentation of files within multiple folders.
 
     write = (source, sections, config) ->
         destination = (file) ->
@@ -335,6 +337,7 @@ Command Line Interface
 
 Finally, let's define the interface to run Docco from the command line.
 Parse options using [Commander](https://github.com/visionmedia/commander.js).
+Default template is the new "betterdocco".
 
     run = (args = process.argv) ->
         c = defaults
