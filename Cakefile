@@ -22,7 +22,7 @@ task 'install', 'install the `betterdocco` command into /usr/local (or --prefix)
    if err then console.error stderr
   )
 
-task 'doc', 'rebuild the Docco documentation', (options) ->
+task 'doc', 'rebuild the Better Docco documentation', (options) ->
   layout = options.layout or 'linear'
   exec([
     "bin/betterdocco --layout #{layout} betterdocco.litcoffee"
@@ -32,7 +32,7 @@ task 'doc', 'rebuild the Docco documentation', (options) ->
     throw err if err
   )
 
-task 'loc', 'count the lines of code in Docco', ->
+task 'loc', 'count the lines of code in Better Docco', ->
   code = fs.readFileSync('betterdocco.litcoffee').toString()
   lines = code.split('\n').filter (line) -> /^    /.test line
-  console.log "Docco LOC: #{lines.length}"
+  console.log "Better Docco LOC: #{lines.length}"
