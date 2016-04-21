@@ -1,24 +1,25 @@
- ____             __     __                       ____
-/\  _`\          /\ \__ /\ \__                   /\  _`\
-\ \ \L\ \     __ \ \ ,_\\ \ ,_\     __   _ __    \ \ \/\ \    ___     ___     ___     ___
- \ \  _ <'  /'__`\\ \ \/ \ \ \/   /'__`\/\`'__\   \ \ \ \ \  / __`\  /'___\  /'___\  / __`\
-  \ \ \L\ \/\  __/ \ \ \_ \ \ \_ /\  __/\ \ \/     \ \ \_\ \/\ \L\ \/\ \__/ /\ \__/ /\ \L\ \
-   \ \____/\ \____\ \ \__\ \ \__\\ \____\\ \_\      \ \____/\ \____/\ \____\\ \____\\ \____/
-    \/___/  \/____/  \/__/  \/__/ \/____/ \/_/       \/___/  \/___/  \/____/ \/____/ \/___/
-
+# Better Docco
 
 Better Docco is a not quick-and-dirty, hundred-line-long, literate-programming-style
 documentation generator based on Docco. For more information, see:
 
 https://github.com/igoramadas/betterdocco
 
-Installation:
+### What's different compared to the original Docco?
 
-  sudo npm install -g betterdocco
+Better Docco will use the full path of source files on the menu and filenames. So you can
+have for instance a index.coffee under /mymodule and another index.coffee under /anothermodule
+and have both documented at the same batch.
 
-Usage: betterdocco [options] FILES
+### Installation:
 
-  Options:
+    $ sudo npm install -g betterdocco
+    
+### Usage
+
+    $ betterdocco [options] FILES
+
+Options:
 
     -h, --help             output usage information
     -V, --version          output the version number
@@ -29,3 +30,4 @@ Usage: betterdocco [options] FILES
     -e, --extension [ext]  use the given file extension for all inputs
     -L, --languages [file] use a custom languages.json
     -m, --marked [file]    use custom marked options
+    

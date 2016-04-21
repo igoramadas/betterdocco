@@ -7,10 +7,11 @@
         "docco",
         "generator",
         "literate",
-        "coffeescript"
+        "coffeescript",
+        "betterdocco"
     ],
     "author": "Igor Ramadas",
-    "version": "0.7.2",
+    "version": "0.7.3",
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -21,11 +22,11 @@
     },
     "dependencies": {
         "coffee-script": ">= 1.10.0",
-        "commander": ">= 0.5.2",
-        "marked": ">= 0.2.7",
-        "fs-extra": ">= 0.6.0",
-        "underscore": ">= 1.0.0",
-        "highlight.js": ">= 8.0.x"
+        "commander": "2.9.0x",
+        "fs-extra": "0.28.x",
+        "highlight.js": "9.3.x",
+        "marked": "0.3.x",
+        "underscore": "1.8.x"
     },
     "main": "./betterdocco",
     "bin": {
