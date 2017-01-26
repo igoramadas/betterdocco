@@ -1,6 +1,7 @@
 .DS_Store
 .idea
+.history
+.vscode
 output
 docs
-test/data
 node_modules
