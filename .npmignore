@@ -1,4 +1,6 @@
 .DS_Store
+.history
+.idea
 .git*
 Cakefile
 index.html
