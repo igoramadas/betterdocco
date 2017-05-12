@@ -11,7 +11,7 @@
         "betterdocco"
     ],
     "author": "Igor Ramadas",
-    "version": "0.7.5",
+    "version": "0.7.6",
     "license": "MIT",
     "repository": {
         "type": "git",
@@ -21,10 +21,10 @@
         "node": ">=0.2.0"
     },
     "dependencies": {
-        "coffee-script": ">= 1.12.3",
+        "coffee-script": ">= 1.12.5",
         "commander": "2.9.x",
-        "fs-extra": "2.0.x",
-        "highlight.js": "9.9.x",
+        "fs-extra": "3.0.x",
+        "highlight.js": "9.11.x",
         "marked": "0.3.x",
         "underscore": "1.8.x"
     },
