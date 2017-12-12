@@ -1,8 +1,9 @@
+.history/
+.idea/
+.openshift/
+.vscode/
+.coveralls.yml
 .DS_Store
-.idea
-.history
-.vscode
-output
 docs
 node_modules
 npm-debug.log

@@ -28,7 +28,6 @@ Finally, the ["literate" style](http://coffeescript.org/#literate) of *any*
 language is also supported — just tack an `.md` extension on the end:
 `.coffee.md`, `.py.md`, and so on.
 
-
 Partners in Crime:
 ------------------
 
@@ -67,7 +66,6 @@ is a **CoffeeScript** fork of Docco that adds a searchable table of contents,
 and aims to gracefully handle large projects with complex hierarchies of code.
 
 Note that not all ports will support all Docco features ... yet.
-
 
 Main Documentation Generation Functions
 ---------------------------------------
@@ -228,7 +226,6 @@ name of the source file.
         console.log "betterdocco: #{source} -> #{destination source}"
         fs.writeFileSync destination(source), html
 
-
 Configuration
 -------------
 
@@ -280,7 +277,6 @@ is only copied for the latter.
 
         config
 
-
 Helpers & Initial Setup
 -----------------------
 
@@ -331,7 +327,6 @@ Keep it DRY. Extract the betterdocco **version** from `package.json`
 
     version = JSON.parse(fs.readFileSync(path.join(__dirname, 'package.json'))).version
 
-
 Command Line Interface
 ----------------------
 
@@ -352,11 +347,11 @@ Default template is the new "betterdocco".
         .option('-m, --marked [file]', 'use custom marked options', c.marked)
         .parse(args)
         .name = "betterdocco"
+
         if commander.args.length
             document commander
         else
             console.log commander.helpInformation()
-
 
 Public API
 ----------

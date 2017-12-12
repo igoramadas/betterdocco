@@ -1,27 +1,29 @@
 {
     "name": "betterdocco",
-    "description": "The (not so) Quick and Dirty Literate Programming Documentation Generator",
-    "keywords": ["documentation", "docs", "docco", "generator", "literate", "coffeescript", "betterdocco"],
-    "author": "Igor Ramadas",
-    "version": "0.7.7",
+    "version": "0.8.0",
+    "description": "The (not so) quick and dirty literate programming documentation generator.",
+    "keywords": ["documentation", "docs", "docco", "generator", "literate", "coffeescript"],
+    "author": "Igor Ramadas <igor@devv.com>",
+    "homepage": "https://betterdocco.devv.com",
+    "subdomain": "betterdocco",
     "license": "MIT",
+    "main": "index",
     "repository": {
         "type": "git",
-        "url": "https://github.com/igoramadas/betterdocco"
+        "url": "https://github.com/igoramadas/betterdocco.git"
     },
     "engines": {
         "node": ">=8.9.0"
     },
+    "bin": {
+        "betterdocco": "./bin/betterdocco"
+    },
     "dependencies": {
-        "coffeescript": "^2.0.3",
-        "commander": "^2.12.x",
-        "fs-extra": "^4.0.2",
+        "coffeescript": "^2.1.0",
+        "commander": "^2.12.2",
+        "fs-extra": "^5.0.0",
         "highlight.js": "^9.12.0",
         "marked": "^0.3.7",
         "underscore": "^1.8.3"
-    },
-    "main": "./betterdocco",
-    "bin": {
-        "betterdocco": "./bin/betterdocco"
     }
 }

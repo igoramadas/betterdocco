@@ -1,2 +1,2 @@
 require("coffeescript/register")
-module.exports = exports = require("./betterdocco.litcoffee")
+module.exports = exports = require("./index.litcoffee")
