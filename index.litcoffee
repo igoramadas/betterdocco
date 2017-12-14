@@ -1,35 +1,39 @@
-Docco
+Better Docco
 =====
 
-**Docco** is a quick-and-dirty documentation generator, written in
-[Literate CoffeeScript](http://coffeescript.org/#literate).
-It produces an HTML document that displays your comments intermingled with your
-code. All prose is passed through
+**Beter Docco** is a quick-and-dirty documentation generator, written in
+[Literate CoffeeScript](http://coffeescript.org/#literate), forked from the
+infamous [Docco](http://ashkenas.com/docco). It generates HTML documents that
+displays your comments intermingled with your code. All prose is passed through
 [Markdown](http://daringfireball.net/projects/markdown/syntax), and code is
 passed through [Highlight.js](http://highlightjs.org/) syntax highlighting.
-This page is the result of running Docco against its own
-[source file](https://github.com/jashkenas/betterdocco/blob/master/betterdocco.litcoffee).
+
+This page is the result of running Better Docco against its own
+[source file](https://github.com/igoramadas/betterdocco/blob/master/index.litcoffee).
 
 1. Install Docco with **npm**: `sudo npm install -g betterdocco`
 
 2. Run it against your code: `betterdocco src/*.coffee`
 
 There is no "Step 3". This will generate an HTML page for each of the named
-source files, with a menu linking to the other pages, saving the whole mess
+source files, with a menu linking to the other pages, saving the whole thing
 into a `docs` folder (configurable).
 
-The [Docco source](http://github.com/jashkenas/betterdocco) is available on GitHub,
+The [source code](http://github.com/igoramadas/betterdocco) is available on GitHub,
 and is released under the [MIT license](http://opensource.org/licenses/MIT).
 
-Docco can be used to process code written in any programming language. If it
+Better Docco can be used to process code written in any programming language. If it
 doesn't handle your favorite yet, feel free to
-[add it to the list](https://github.com/jashkenas/betterdocco/blob/master/resources/languages.json).
+[add it to the list](https://github.com/igoramadas/betterdocco/blob/master/resources/languages.json).
 Finally, the ["literate" style](http://coffeescript.org/#literate) of *any*
 language is also supported — just tack an `.md` extension on the end:
 `.coffee.md`, `.py.md`, and so on.
 
 Partners in Crime:
 ------------------
+
+* The original [Docco](https://github.com/jashkenas/docco),
+from [Jeremy Ashkenas](https://github.com/jashkenas).
 
 * If Node.js doesn't run on your platform, or you'd prefer a more
 convenient package, get [Ryan Tomayko](http://github.com/rtomayko)'s
@@ -65,7 +69,7 @@ aficionado, check out [Don Wilson](https://github.com/dontangg)'s
 is a **CoffeeScript** fork of Docco that adds a searchable table of contents,
 and aims to gracefully handle large projects with complex hierarchies of code.
 
-Note that not all ports will support all Docco features ... yet.
+Note that not all ports will support all Better Docco features ... yet.
 
 Main Documentation Generation Functions
 ---------------------------------------
@@ -198,8 +202,8 @@ text, to better handle documentation of files within multiple folders.
             dirname = dirname.replace path.resolve(config.output), ''
             dirname = dirname.replace path.resolve(__dirname), ''
             dirname = dirname.split('/').join('.')
-
-            path.join(config.output, dirname + filename)
+            result = path.join(config.output, dirname + filename)
+            result.replace(/\.\./g,'')
 
         menuText = (file) ->
             filename = path.basename(file)
@@ -253,7 +257,7 @@ source files for languages for which we have definitions.
 The user is able to override the layout file used with the `--template` parameter.
 In this case, it is also neccessary to explicitly specify a stylesheet file.
 These custom templates are compiled exactly like the predefined ones, but the `public` folder
-is only copied for the latter.
+is only copied for the latter. Filenames stays as docco.xxx for compatibility reasons.
 
         if options.template
             unless options.css
@@ -292,7 +296,7 @@ Require our external dependencies.
 Languages are stored in JSON in the file `resources/languages.json`.
 Each item maps the file extension to the name of the language and the
 `symbol` that indicates a line comment. To add support for a new programming
-language to Docco, just add it to the file.
+language to Better Docco, just add it to the file.
 
     languages = JSON.parse fs.readFileSync(path.join(__dirname, 'resources', 'languages.json'))
 
@@ -330,7 +334,7 @@ Keep it DRY. Extract the betterdocco **version** from `package.json`
 Command Line Interface
 ----------------------
 
-Finally, let's define the interface to run Docco from the command line.
+Finally, let's define the interface to run Better Docco from the command line.
 Parse options using [Commander](https://github.com/visionmedia/commander.js).
 Default template is the new "betterdocco".
 

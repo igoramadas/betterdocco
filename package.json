@@ -2,7 +2,14 @@
     "name": "betterdocco",
     "version": "0.8.0",
     "description": "The (not so) quick and dirty literate programming documentation generator.",
-    "keywords": ["documentation", "docs", "docco", "generator", "literate", "coffeescript"],
+    "keywords": [
+        "documentation",
+        "docs",
+        "docco",
+        "generator",
+        "literate",
+        "coffeescript"
+    ],
     "author": "Igor Ramadas <igor@devv.com>",
     "homepage": "https://betterdocco.devv.com",
     "subdomain": "betterdocco",
