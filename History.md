@@ -1,4 +1,4 @@
-# Changelog for expresser
+# Changelog for betterdocco
 
 0.8.0
 =====
